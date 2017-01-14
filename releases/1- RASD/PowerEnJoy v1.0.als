@@ -60,7 +60,6 @@ fact PauseCarSafeOut{no c:Car | (c.state=Pause) and (c.is.area=SafeArea and c.is
 fact UserUseCar{all u:User | all c:Car | u.coordinate=c.is iff (c.state=In_use and c.tb=u.has)}
 --each use or pause car has reservation
 
-----QUI PROBLEMI
 fact TBcar{all c:Car| no  t:TemporaryBill | c.state=Available and c.tb=t}
 fact TBcar{all c:Car| no  t:TemporaryBill | c.state=Out_of_power and c.tb=t}
 --each available or oop car has reservation
